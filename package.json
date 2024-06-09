@@ -5,18 +5,26 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prettier": "prettier --write \"**/*.{js,vue,json,md}\"",
+    "lint": "eslint \"**/*.{js,vue,json,md}\"",
+    "test": "jest",
+    "husky": "npm run lint && npm run test"
   },
   "dependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
     "@eslint/js": "^9.4.0",
     "@vitejs/plugin-vue": "^4.2.3",
+    "babel-jest": "^29.7.0",
     "eslint": "^9.4.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.4.0",
     "husky": "^9.0.11",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.5",
     "prettier": "3.3.1",
     "vite": "^4.5.1"
